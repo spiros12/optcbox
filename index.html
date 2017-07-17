@@ -1,30 +1,43 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Hank Quinlan, Horrible Cop</title>
-		<!-- link to main stylesheet -->
+		<title>Optc Box</title>
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<style>
+			table td {
+				padding:25px;
+				border: 5px solid red;
+			}
+			
+			table {
+				margin:auto;
+			}
+		</style>
+		<script>
+		
+			window.onload = function() {
+				var body = document.getElementsByTagName("body")[0];
+				
+				var table = document.createElement('TABLE');
+				
+				var tblB = document.createElement('TBODY');
+				
+				table.appendChild(tblB);
+				
+				for(i=0;i<10;i++) {
+					var tr = document.createElement('TR');
+					tblb.appendChild(tr);
+					for(j=0;j<10;j++) {
+						var td = document.createElement('TD');
+						tr.appendChild(td);
+					}
+				}
+				body.appendChild(table);
+			}
+		</script>
 	</head>
 	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">CV</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hi there, I'm Hank Quinlan!</h1>
-				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-			</ul>
-		</footer>
+		<h1>Dynamic Table</h1>
+		<div id="TBL"></div>
 	</body>
 </html>
