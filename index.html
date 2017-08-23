@@ -5,7 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 		<style>
 			table td {
-				padding:25px;
+				padding:5px;
 				border: 5px solid red;
 			}
 			
@@ -25,16 +25,18 @@
 				
 				table.appendChild(tblB);
 				var id = 0;
-				for(i=0;i<15;i++) {
+				for(i=0;i<50;i++) {
 					var tr = document.createElement('TR');
 					tblB.appendChild(tr);
-					for(j=0;j<15;j++) {
+					for(j=0;j<5;j++) {
 						var td = document.createElement('TD');
-                      	id++;
-                      	var x = document.createElement("IMG");
-                      	x.src = "https://onepiece-treasurecruise.com/wp-content/uploads/f" + ("000" + id).slice(-4) + ".png";
-                    	td.appendChild(x);
-						tr.appendChild(td);
+            id++;
+            	var x = document.createElement("IMG");
+							x.width = 30;
+							x.height = 30;
+              x.src = "https://onepiece-treasurecruise.com/wp-content/uploads/f" + ("000" + id).slice(-4) + ".png";
+              td.appendChild(x);
+							tr.appendChild(td);
 					}
 				}
 				body.appendChild(table);
